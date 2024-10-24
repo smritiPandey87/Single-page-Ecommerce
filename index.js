@@ -50,21 +50,35 @@ let productIn = "";
 // let prod=productIn;
 
 
-for (let i = 0; i < productInfo.length; i++) {
-    let prod = productInfo[i];
+// for (let i = 0; i < productInfo.length; i++) {
+//     let prod = productInfo[i];
 
+//     productIn += `
+//         <div class="product-card">
+//             <img src="${prod.img}" alt="${prod.name}">
+//             <h3>${prod.name}</h3>
+//             <p>${prod.brand}</p>
+//             <p class="price">$${prod.price}</p>
+//             <button onclick="addToCart(${i})">Add to Cart</button>
+//             <button onclick="addToWishlist(${i})">Add to Wishlist</button>
+//         </div>
+//     `;
+// }
+
+productInfo.forEach((product, index) => {
     productIn += `
-        <div class="product-card">
-            <img src="${prod.img}" alt="${prod.name}">
-            <h3>${prod.name}</h3>
-            <p>${prod.brand}</p>
-            <p class="price">$${prod.price}</p>
-            <button onclick="addToCart(${i})">Add to Cart</button>
-            <button onclick="addToWishlist(${i})">Add to Wishlist</button>
-        </div>
-    `;
-}
-
+            
+                 <div class="product-card">
+                     <img src="${product.img}" alt="${product.name}">
+                     <h3>${product.name}</h3>
+                     <p>${product.brand}</p>
+                     <p class="price">$${product.price}</p>
+                     <button onclick="addToCart(${index})">Add to Cart</button>
+                     <button onclick="addToWishlist(${index})">Add to Wishlist</button>
+                 </div>
+             `;
+     });
+    
 
 
 
