@@ -84,16 +84,16 @@ productInfo.forEach((product, index) => {
 
 productListContainer.innerHTML = productIn;
 
-// function addToCart(id) {
-//     cartCount++;
-//     cart.innerText = cartCount;
-//     alert(`Product with ID: ${id} added to cart`);
-// }
+ function addToCart(id) {
+     cartCount++;   
+       cart.innerText = cartCount;
+     alert(`Product with ID: ${id} added to cart`);
+ }
 
 
-// function addToWishlist(id) {
-//     wishlistCount++;
-//     wishlist.innerText = wishlistCount;
-//     alert(`Product with ID: ${id} added to wishlist`);
-// }
+ function addToWishlist(id) {
+    wishlistCount++;
+    wishlist.innerText = wishlistCount;
+     alert(`Product with ID: ${id} added to wishlist`);
+}
 
