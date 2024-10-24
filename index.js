@@ -34,19 +34,38 @@ let productListContainer = document.getElementById("product-list");
 let productIn = "";
 
 
-productInfo.map((product, i) => {
+// productInfo.map((product, i) => {
+//     productIn += `
+//         <div class="product-card">
+//             <img src="${product.img}" alt="${product.name}">
+//             <h3>${product.name}</h3>
+//             <p>${product.brand}</p>
+//             <p class="price">$${product.price}</p>
+//             <p class="stock">${product.InStock ? "Available" : "Not Available"}</p>
+//             <button onclick="addToCart(${product.Id})">Add to Cart</button>
+//             <button onclick="addToWishlist(${product.Id})">Add to Wishlist</button>
+//         </div>
+//     `;
+// });
+// let prod=productIn;
+
+
+for (let i = 0; i < productInfo.length; i++) {
+    let prod = productInfo[i];
+
     productIn += `
         <div class="product-card">
-            <img src="${product.img}" alt="${product.name}">
-            <h3>${product.name}</h3>
-            <p>${product.brand}</p>
-            <p class="price">$${product.price}</p>
-            <p class="stock">${product.InStock ? "Available" : "Not Available"}</p>
-            <button onclick="addToCart(${product.Id})">Add to Cart</button>
-            <button onclick="addToWishlist(${product.Id})">Add to Wishlist</button>
+            <img src="${prod.img}" alt="${prod.name}">
+            <h3>${prod.name}</h3>
+            <p>${prod.brand}</p>
+            <p class="price">$${prod.price}</p>
+            <button onclick="addToCart(${i})">Add to Cart</button>
+            <button onclick="addToWishlist(${i})">Add to Wishlist</button>
         </div>
     `;
-});
+}
+
+
 
 
 productListContainer.innerHTML = productIn;
