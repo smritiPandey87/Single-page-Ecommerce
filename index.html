@@ -1,98 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Single-Page E Commerce </title>
-    <link rel="stylesheet" href="index.css">
-</head>
-<body>
-    
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-Commerce Product List</title>
+    <link rel="stylesheet" href="./index.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav class="navbar" id="nav">
+      <h1>My Shop</h1>
+      <div class="cart-wishlist">
+        <span class="icon">
+          <i class="wish icon"></i>
+          <img src="assets/wish.png" />
 
+          <span id="wishlist-count">0</span>
+        </span>
+      </div>
 
-   
-    <nav>
-        <ul>
-       <li><div class="navbar">
-            <div class="logo">
-                <h1>Shop</h1>
-            </div>
-            <div class="icons">
-                
-                <div class="cart">
-                    <div class="carticon">
-                        <img src="carticon.png">
+      <a href="./cart/cart.html">
+        <span class="icon">
+          <img src="assets/cart.png" />
+          <span id="cart-count">0</span>
+        </span>
+      </a>
+      <div id="login-container">
+        <span class="icon">
+          <img src="assets/iconnnn.jpg" />
+        </span>
 
-                        <span class="cart-count">0</span> 
-                    </div>
-                </li> 
-                </div>
-
-              <li>  
-                <div class="wishlist">
-                  <div class="wishicon">
-                    <img src="wishicon.png">
-                    <span class="wishlist-count">0</span> 
-                    </div>
-                </div>
-            </li>
-            </div>
-        </div>
-    </ul>
+        <a href="./login/login.html">
+          <span class="login">
+            <span id="log">LogIn</span>
+          </span>
+        </a>
+        <a href="./singup/signup.html">
+          <span class="signUp">
+            <span id="Sign">Sign Up</span>
+          </span>
+        </a>
+      </div>
     </nav>
-    <main>
-        <div class="product-container">
-           
-            <div class="product-card">
-                <h2>Perfume</h2>
-                <img src="perfume.jpg">
-                <p> "brand": "ZARA"
-                </p>
-                <p> "price": 2100,
-                    
-                </p>
-                
-                <button>Add to Cart</button>
-                <button>Add to Wishlist</button>
-            </div>
-            <div class="product-card">
-                <h2> BUDS</h2>
-                <img src="buds.jpg">
-                <p>"brand": "NOISE"</p>
-                <p>"price": "999"</p>
-                
-                <button>Add to Cart</button>
-                <button>Add to Wishlist</button>
-            </div>
-            <div class="product-card">
-                <h2>Earrings</h2>
-                <img src="jumka.jpg">
-                <p>"brand":"local Earrings"</p>
-                <p>"price": "799"</p>
-                <button>Add to Cart</button>
-                <button>Add to Wishlist</button>
-            </div>
-            <div class="product-card">
-                <h2> LADIES PURSE</h2>
-                <img src="purse.jpg">
-                <p>"brand":"GUCCI"</p>
-                <p>"brand":"1,20,000"</p>
-                <button>Add to Cart</button>
-                <button>Add to Wishlist</button>
-            </div>
-            <div class="product-card">
-                <h2>HEEL</h2>
-                <img src="heels.jpg">
-                <p>"brand":"KHADIMS"</p>
-                <p>"Price":"799"</p>
-                <button>Add to Cart</button>
-                <button>Add to Wishlist</button>
-            </div>
-        </div>
-    </main>
 
-    <script src="index.js">
+    <div id="cartDescription"></div>
 
-    </script>
-</body>
+    <div id="product-list"></div>
+
+    <script src="./index.js"></script>
+  </body>
 </html>
