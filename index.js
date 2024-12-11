@@ -29,8 +29,10 @@ let wishlist = document.getElementById("wishlist-count");
 let productListContainer = document.getElementById("product-list");
 const cartItemsContainer = document.getElementById("cart-items");
 
+
 let cart = document.getElementById("cart-count");
 let cartArr = JSON.parse(localStorage.getItem("cartItems")) || [];
+
 let cartCount = cartArr.length;
 let wishlistCount = 0;
 
@@ -42,7 +44,7 @@ function renderProductList() {
                   <img src="${product.img}" alt="${product.name}">
                   <h3>${product.name}</h3>
                   <p>${product.brand}</p>
-                  <p class="price">$${product.price}</p>
+                  <p class="price">₹${product.price}</p>
                   <p class="stock">${
                     product.InStock ? "Available" : "Not Available"
                   }</p>
@@ -96,7 +98,6 @@ function addToCart(Id) {
   }
 
   const isAlreadyInCart = cartArr.some((item) => item.Id === Id);
-
   if (isAlreadyInCart) {
     showPopup("This item is already in your cart!");
   } else {
@@ -104,28 +105,26 @@ function addToCart(Id) {
     cartCount++;
     cart.innerText = cartCount;
     localStorage.setItem("cartItems", JSON.stringify(cartArr));
-    // renderCartItems();
     showPopup("Item has been added to your cart!");
   }
-}
 
-function showPopup(message) {
-  const popup = document.getElementById("popup");
-  const popupMessage = document.getElementById("popup-message");
-  popupMessage.textContent = message;
-  popup.classList.remove("hidden");
-}
+  function showPopup(message) {
+    const popup = document.getElementById("popup");
+    const popupMessage = document.getElementById("popup-message");
 
-function showPopup(message) {
-  const popup = document.getElementById("popup");
-  const popupMessage = document.getElementById("popup-message");
+    popupMessage.textContent = message;
 
-  popupMessage.textContent = message;
-  popup.classList.remove("hidden");
+    popup.classList.remove("hidden");
 
-  setTimeout(() => {
-    closePopup();
-  }, 3000);
+    setTimeout(() => {
+      closePopup();
+    }, 1000);
+  }
+
+  function closePopup() {
+    const popup = document.getElementById("popup");
+    popup.classList.add("hidden");
+  }
 }
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -150,8 +149,6 @@ document.addEventListener("DOMContentLoaded", () => {
       loginContainer.innerHTML = `
         <a href= "login/login.html"> LogIn</a>
      
-      
-        
            `;
     });
   }
