@@ -11,49 +11,48 @@
     />
   </head>
   <body>
-    <nav class="navbar" id="nav">
-      <span class="iconn">
-        <img src="mmy.png" />
-      </span>
-      <div class="cart-wishlist">
-        <span class="icon">
-          <i class="wish icon"></i>
-          <img src="wishhhhh.png" alt="wishh" />
-          <div class="overlay-text">Wishlist</div>
-
-          <span id="wishlist-count"></span>
+    <header>
+      <nav class="navbar" id="nav">
+        <span class="iconn">
+          <img src="mmy.png" />
         </span>
-      </div>
+        <div class="cart-wishlist">
+          <span class="icon">
+            <i class="wish icon"></i>
+            <img src="wishhhhh.png" alt="wishh" />
+            <div class="overlay-text">Wishlist</div>
 
-      <a href="./cart/cart.html">
-        <span class="icon">
-          <img src="bag.png" alt="Bag" />
-          <div class="overlay-text">Bag</div>
-          <span id="cart-count">0</span>
-        </span>
-      </a>
+            <span id="wishlist-count"></span>
+          </span>
+        </div>
 
-      <div id="login-container">
-        <span class="icon">
-          <img src="assets/iconnnn.jpg" />
-        </span>
-
-        <a href="./login/login.html">
-          <span class="login">
-            <span id="log">LogIn</span>
+        <a href="./cart/cart.html">
+          <span class="icon">
+            <img src="bag.png" alt="Bag" />
+            <div class="overlay-text">Bag</div>
+            <span id="cart-count">0</span>
           </span>
         </a>
-        <a href="./singup/signup.html">
-          <span class="signUp">
-            <span id="Sign">Sign Up</span>
-          </span>
-        </a>
-      </div>
-    </nav>
 
-    <div id="cartDescription"></div>
-
-    <div id="product-list"></div>
+        <div id="login-container">
+          <a href="./login/login.html">
+            <span class="login">
+              <span id="log">LogIn</span>
+            </span>
+          </a>
+        </div>
+        <div id="signUp-container">
+          <a href="./singup/signup.html">
+            <span class="signUp">
+              <span id="Sign">Sign Up</span>
+            </span>
+          </a>
+        </div>
+      </nav>
+    </header>
+    <div id="cartDescription">
+      <div id="product-list"></div>
+    </div>
 
     <div id="popup" class="popup hidden">
       <p id="popup-message"></p>

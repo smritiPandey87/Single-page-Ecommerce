@@ -1,28 +1,27 @@
-
 const productInfo = [
   {
     Id: 1,
-    name: "TShirt",
-    brand: "POLO",
+    brand: "Forever New",
+    name: "Women Bodycon Black Dress",
     price: 1200,
     InStock: true,
-    img: "https://rukminim2.flixcart.com/image/612/612/xif0q/t-shirt/p/9/i/m-lrkpnslf174030-louis-philippe-jeans-original-imagszfr4fzpjzvm.jpeg?q=70",
+    img: "https://rukminim2.flixcart.com/image/612/612/xif0q/dress/v/l/c/xxl-black-a-s-fashion-original-imah7yr8ttuhtgy9.jpeg?q=70",
   },
   {
     Id: 2,
-    name: "Shoe",
-    brand: "PUMA",
+    brand: "Forever New",
+    name: "Women Fit and Flare Blue, White Dress",
     price: 2200,
     InStock: false,
-    img: "https://rukminim2.flixcart.com/image/612/612/xif0q/shoe/e/m/v/-original-imah4adtab5dvcbw.jpeg?q=70",
+    img: "https://rukminim2.flixcart.com/image/612/612/xif0q/dress/3/q/t/l-htdrss7133-honky-tonky-original-imagszfhfghhs2rp.jpeg?q=70",
   },
   {
     Id: 3,
-    name: "Kurtis",
-    brand: "LIVA KURTIS",
+    brand: "Forever New",
+    name: "Women Solid A-line Black Skirt",
     price: 6300,
     InStock: true,
-    img: "https://rukminim2.flixcart.com/image/612/612/xif0q/ethnic-set/n/n/x/m-e919-the-style-story-original-imaguqrdsykzddsm.jpeg?q=70",
+    img: "https://rukminim2.flixcart.com/image/612/612/xif0q/skirt/t/b/j/32-3341-buynewtrend-original-imagt2zdxwjz8hrb.jpeg?q=70",
   },
 ];
 
@@ -42,10 +41,10 @@ function renderProductList() {
     productIn += `
               <div class="product-card">
                   <img src="${product.img}" alt="${product.name}">
+               <p>${product.brand}</p>
                   <h3>${product.name}</h3>
-                  <p>${product.brand}</p>
-                  <p class="price">₹${product.price}</p>
-       <button class="add-to-cart-btn" onclick="addToCart(${product.Id})">Add to Cart</button>
+                 <p class="price">₹${product.price}</p>
+                  <button class="add-to-cart-btn" onclick="addToCart(${product.Id})">Add to Cart</button>
               </div>
           `;
   });
