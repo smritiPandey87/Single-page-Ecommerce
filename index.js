@@ -1,3 +1,4 @@
+
 const productInfo = [
   {
     Id: 1,
@@ -25,15 +26,15 @@ const productInfo = [
   },
 ];
 
-// let wishlist = document.getElementById("wishlist-count");
-// let productListContainer = document.getElementById("product-list");
-// const cartItemsContainer = document.getElementById("cart-items");
+let wishlist = document.getElementById("wishlist-count");
+let productListContainer = document.getElementById("product-list");
+const cartItemsContainer = document.getElementById("cart-items");
 
-// let cart = document.getElementById("cart-count");
-// let cartArr = JSON.parse(localStorage.getItem("cartItems")) || [];
+let cart = document.getElementById("cart-count");
+let cartArr = JSON.parse(localStorage.getItem("cartItems")) || [];
 
-// let cartCount = cartArr.length;
-// let wishlistCount = 0;
+let cartCount = cartArr.length;
+let wishlistCount = 0;
 
 function renderProductList() {
   let productIn = "";
@@ -44,82 +45,12 @@ function renderProductList() {
                   <h3>${product.name}</h3>
                   <p>${product.brand}</p>
                   <p class="price">₹${product.price}</p>
+       <button class="add-to-cart-btn" onclick="addToCart(${product.Id})">Add to Cart</button>
               </div>
           `;
   });
   productListContainer.innerHTML = productIn;
 }
-
-// function addToCart(Id) {
-//   const product = productInfo.find((item) => item.Id === Id);
-//   if (product) {
-//     cartArr.push(product);
-//     cartCount++;
-//     cart.innerText = cartCount;
-//     localStorage.setItem("cartItems", JSON.stringify(cartArr));
-//     // renderCartItems();
-//   }
-// }
-
-// window.addToCart = addToCart;
-
-// window.addToWishlist = function (Id) {
-//   wishlistCount++;
-//   wishlist.innerText = wishlistCount;
-// };
-
-// renderProductList();
-// cart.innerText = cartCount;
-// // renderCartItems();
-
-// // const cartItemsContainerr = document.getElementById("cart-items");
-// // if (cartItemsContainerr) {
-// //   renderCartItems();
-// // } else {
-// //   console.error("Element with ID 'cart-items' not found.");
-// // }
-// Sample data for products (replace with your actual product data)
-
-let cartArr = [];
-let cartCount = 0;
-
-// Assume cart and wishlist are HTML elements displaying counts
-const cart = document.getElementById("cart-count");
-const wishlist = document.getElementById("wishlist-count");
-
-function addToCart(Id) {
-  const product = productInfo.find((item) => item.Id === Id);
-  if (product) {
-    cartArr.push(product);
-    cartCount++;
-    cart.innerText = cartCount;
-    localStorage.setItem("cartItems", JSON.stringify(cartArr));
-    console.log(`Product added: ${product.name}`);
-  } else {
-    console.error(`Product with ID ${Id} not found.`);
-  }
-}
-
-
-function renderProductList() {
-  const productContainer = document.getElementById("product-list"); products
-
-  productInfo.forEach((product) => {
-    const productCard = document.createElement("div");
-    productCard.classList.add("product-card");
-
-    productCard.innerHTML = `
-      <h3>${product.name}</h3>
-      <p>Price: $${product.price}</p>
-      <button class="add-to-cart-btn" onclick="addToCart(${product.Id})">Add to Cart</button>
-    `;
-
-    productContainer.appendChild(productCard);
-  });
-}
-
-renderProductList();
-cart.innerText = cartCount;
 
 function addToCart(Id) {
   const product = productInfo.find((item) => item.Id === Id);
@@ -139,25 +70,27 @@ function addToCart(Id) {
     localStorage.setItem("cartItems", JSON.stringify(cartArr));
     showPopup("Item has been added to your cart!");
   }
-
-  function showPopup(message) {
-    const popup = document.getElementById("popup");
-    const popupMessage = document.getElementById("popup-message");
-
-    popupMessage.textContent = message;
-
-    popup.classList.remove("hidden");
-
-    setTimeout(() => {
-      closePopup();
-    }, 1000);
-  }
-
-  function closePopup() {
-    const popup = document.getElementById("popup");
-    popup.classList.add("hidden");
-  }
 }
+
+function showPopup(message) {
+  const popup = document.createElement("div");
+  popup.className = "popup";
+  popup.innerText = message;
+  document.body.appendChild(popup);
+  setTimeout(() => {
+    popup.remove();
+  }, 2000);
+}
+
+window.addToCart = addToCart;
+
+window.addToWishlist = function (Id) {
+  wishlistCount++;
+  wishlist.innerText = wishlistCount;
+};
+
+renderProductList();
+cart.innerText = cartCount;
 
 document.addEventListener("DOMContentLoaded", () => {
   const isLoggedIn = localStorage.getItem("isLoggedIn");
