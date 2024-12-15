@@ -14,21 +14,23 @@
     <header>
       <nav class="navbar" id="nav">
         <span class="iconn">
-          <img src="mmy.png" />
+          <img src="./assets/mmy.png" />
         </span>
         <div class="cart-wishlist">
-          <span class="icon">
-            <i class="wish icon"></i>
-            <img src="wishhhhh.png" alt="wishh" />
-            <div class="overlay-text">Wishlist</div>
+          <a href="./wishlist/wish.html">
+            <span class="icon">
+              <i class="wish icon"></i>
+              <img src="./assets/wishhhhh.png" />
+              <div class="overlay-text">Wishlist</div>
 
-            <span id="wishlist-count"></span>
-          </span>
+              <span id="wishlist-count"></span>
+            </span>
+          </a>
         </div>
 
         <a href="./cart/cart.html">
           <span class="icon">
-            <img src="bag.png" alt="Bag" />
+            <img src="/assets/" alt="Bag" />
             <div class="overlay-text">Bag</div>
             <span id="cart-count">0</span>
           </span>
@@ -50,9 +52,9 @@
         </div>
       </nav>
     </header>
-    <div id="cartDescription">
-      <div id="product-list"></div>
-    </div>
+    <div id="cartDescription"></div>
+    <div id="product-list"></div>
+    <div class="product-list-container" id="productListContainer"></div>
 
     <div id="popup" class="popup hidden">
       <p id="popup-message"></p>
@@ -68,6 +70,6 @@
       </div>
     </footer>
 
-    <script src="./index.js"></script>
+    <script type="module" src="./index.js"></script>
   </body>
 </html>

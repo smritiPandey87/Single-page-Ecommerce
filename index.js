@@ -1,29 +1,6 @@
-const productInfo = [
-  {
-    Id: 1,
-    brand: "Forever New",
-    name: "Women Bodycon Black Dress",
-    price: 1200,
-    InStock: true,
-    img: "https://rukminim2.flixcart.com/image/612/612/xif0q/dress/v/l/c/xxl-black-a-s-fashion-original-imah7yr8ttuhtgy9.jpeg?q=70",
-  },
-  {
-    Id: 2,
-    brand: "Forever New",
-    name: "Women Fit and Flare Blue, White Dress",
-    price: 2200,
-    InStock: false,
-    img: "https://rukminim2.flixcart.com/image/612/612/xif0q/dress/3/q/t/l-htdrss7133-honky-tonky-original-imagszfhfghhs2rp.jpeg?q=70",
-  },
-  {
-    Id: 3,
-    brand: "Forever New",
-    name: "Women Solid A-line Black Skirt",
-    price: 6300,
-    InStock: true,
-    img: "https://rukminim2.flixcart.com/image/612/612/xif0q/skirt/t/b/j/32-3341-buynewtrend-original-imagt2zdxwjz8hrb.jpeg?q=70",
-  },
-];
+import { productInfo } from "./data/data.js";
+
+console.log(productInfo);
 
 let wishlist = document.getElementById("wishlist-count");
 let productListContainer = document.getElementById("product-list");
@@ -45,6 +22,7 @@ function renderProductList() {
                   <h3>${product.name}</h3>
                  <p class="price">₹${product.price}</p>
                   <button class="add-to-cart-btn" onclick="addToCart(${product.Id})">Add to Cart</button>
+                  
               </div>
           `;
   });
@@ -70,6 +48,7 @@ function addToCart(Id) {
     showPopup("Item has been added to your cart!");
   }
 }
+
 
 function showPopup(message) {
   const popup = document.createElement("div");
