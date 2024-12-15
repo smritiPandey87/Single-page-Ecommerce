@@ -1,7 +1,4 @@
 import { productInfo } from "./data/data.js";
-
-console.log(productInfo);
-
 let wishlist = document.getElementById("wishlist-count");
 let productListContainer = document.getElementById("product-list");
 const cartItemsContainer = document.getElementById("cart-items");
@@ -49,7 +46,6 @@ function addToCart(Id) {
   }
 }
 
-
 function showPopup(message) {
   const popup = document.createElement("div");
   popup.className = "popup";
@@ -96,3 +92,4 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
