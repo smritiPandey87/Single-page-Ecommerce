@@ -77,7 +77,7 @@ header {
 
 .iconn img {
   height: auto;
-  width:  80px;
+  width: 80px;
 }
 
 .iconn2 {
@@ -94,7 +94,90 @@ header {
 .iconn2 p {
   font-size: 12px;
   font-weight: 600;
- letter-spacing: 3px;
+  letter-spacing: 3px;
   color: #535766;
   margin: 0 20px 0 0;
+}
+
+
+#checkout-items {
+  margin: 20px auto;
+  max-width: 800px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+
+.checkout-item {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  padding: 15px 0;
+}
+
+.checkout-item:last-child {
+  border-bottom: none;
+}
+
+.checkout-item-img {
+  max-width: 100px;
+  max-height: 100px;
+  margin-right: 20px;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+
+.checkout-item-details {
+  flex: 1;
+}
+
+.checkout-item-details h4 {
+  margin: 0;
+  font-size: 18px;
+  color: #333;
+}
+
+.checkout-item-details p {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #555;
+}
+
+.checkout-item-details .btn {
+  background-color: #e74c3c;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+.checkout-item-details .btn:hover {
+  background-color: #c0392b;
+}
+
+
+#checkout-total {
+  font-size: 18px;
+  font-weight: bold;
+  text-align: right;
+  margin-top: 20px;
+  padding: 10px;
+  border-top: 2px solid #ddd;
+}
+
+/* Button Styles */
+button {
+  cursor: pointer;
+  outline: none;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  background-color: #ccc;
 }
