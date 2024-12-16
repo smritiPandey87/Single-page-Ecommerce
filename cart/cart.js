@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
   function renderCartItems() {
     if (cartArr.length === 0) {
       cartItemsContainer.innerHTML = "<p>Your cart is empty</p>";
+      document.getElementById("checkout-button-container").innerHTML = ""; 
       return;
     }
 
@@ -32,7 +33,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 item.Id
               })">+</button>
             </div>
-
             <p>Total: ₹<span id="total-price-${item.Id}">${
         item.numberOfUnits * item.price
       }</span></p>
@@ -42,6 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     updateCartTotal();
+    renderCheckoutButton();
   }
 
   window.changeNumberOfUnits = (action, id) => {
@@ -53,8 +54,6 @@ document.addEventListener("DOMContentLoaded", () => {
           item.numberOfUnits++;
         }
       }
-      console.log(item.Id,id,cartArr)
-      
       return item;
     });
 
@@ -72,6 +71,23 @@ document.addEventListener("DOMContentLoaded", () => {
       cartTotal += item.numberOfUnits * item.price;
     });
     document.getElementById("cart-total").innerText = `Total: ₹${cartTotal}`;
+  }
+
+  function renderCheckoutButton() {
+    const checkoutContainer = document.getElementById(
+      "checkout-button-container"
+    );
+    if (cartArr.length > 0) {
+      checkoutContainer.innerHTML = `
+        <button class="btn" id="checkout-button">Proceed to Checkout</button>
+      `;
+      const checkoutButton = document.getElementById("checkout-button");
+      checkoutButton.addEventListener("click", () => {
+        window.location.href = "../checkout/check.html";
+      });
+    } else {
+      checkoutContainer.innerHTML = ""; 
+    }
   }
 
   renderCartItems();

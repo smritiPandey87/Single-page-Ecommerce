@@ -90,11 +90,11 @@ export const productInfo = [
   },
   {
     Id: 12,
-    brand: "Forever New",
-    name: "Women Solid Dresst",
+    brand: "POLO TSHIRTS",
+    name: "Men Solid Tshirt",
     price: 1300,
     InStock: true,
-    img: "",
+    img: "https://rukminim2.flixcart.com/image/612/612/xif0q/t-shirt/t/g/2/m-t791-aw-new3-eyebogler-original-imah46t6wqtrkaxt.jpeg?q=70",
   },
   {
     Id: 13,
