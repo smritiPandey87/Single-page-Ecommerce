@@ -10,7 +10,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
   let totalAmount = 0;
 
-  
   function renderCheckoutItems() {
     if (cartItems.length === 0) {
       cartItemsContainer.innerHTML = "<p>Your cart is empty.</p>";
@@ -43,16 +42,13 @@ document.addEventListener("DOMContentLoaded", () => {
     updateTotalPrice();
   }
 
-  
   function updateTotalPrice() {
     totalAmount = cartItems.reduce(
       (sum, item) => sum + item.price * item.numberOfUnits,
       0
     );
-    totalPriceContainer.innerText = `Total: ₹${totalAmount}`;
   }
 
- 
   cartItemsContainer.addEventListener("click", (event) => {
     if (event.target.classList.contains("remove")) {
       const itemIndex = event.target.getAttribute("data-index");
@@ -62,6 +58,5 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  
   renderCheckoutItems();
 });
