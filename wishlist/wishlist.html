@@ -3,19 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>E-Commerce Product List</title>
-    <link rel="stylesheet" href="./index.css" />
-    <link
-      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
-      rel="stylesheet"
-    />
+    <link rel="stylesheet" href="./wishlist.css" />
+    <title>WishList</title>
   </head>
   <body>
     <header>
       <nav>
         <div class="nav-left">
           <span class="iconn">
-            <img src="./assets/mmy.png" />
+            <img src="../assets/mmy.png" />
           </span>
         </div>
         <nav>
@@ -24,7 +20,7 @@
             <div class="cart-wishlist">
                <span class="icon">
                   <i class="wish icon"></i>
-                  <img src="./assets/wishhhhh.png" />
+                  <img src="../assets/wishhhhh.png" />
                   <div class="overlay-text">Wishlist</div>
                     <span id="wishlist-count"></span>
                 </span>
@@ -33,7 +29,7 @@
             </div>
             <a href="./cart/cart.html">
               <span class="icon">
-                <img src="/assets/bag.png" alt="Bag" />
+                <img src="../assets/bag.png" alt="Bag" />
                 <div class="overlay-text">Bag</div>
                 <span id="cart-count">0</span>
               </span>
@@ -54,23 +50,8 @@
             </div>
           </div>
       </nav>
-        
       </nav>
     </header>
-    <div id="cartDescription"></div>
-    <div id="product-list"></div>
-    <div class="product-list-container" id="productListContainer"></div>
-
-    <div id="popup" class="popup hidden">
-      <p id="popup-message"></p>
-    </div>
-    <footer>
-      <div class="footer-content">
-        <p>&copy; 2024 Your E-Commerce Site. All Rights Reserved.</p>
-        
-      </div>
-    </footer>
-
-    <script type="module" src="./index.js"></script>
+    <script src="./wishlist.js"></script>
   </body>
 </html>
