@@ -1,3 +1,4 @@
+
 document.addEventListener("DOMContentLoaded", () => {
   const cartItemsContainer = document.getElementById("cart-items");
   let cartArr = JSON.parse(localStorage.getItem("cartItems")) || [];
@@ -83,7 +84,7 @@ document.addEventListener("DOMContentLoaded", () => {
       `;
       const checkoutButton = document.getElementById("checkout-button");
       checkoutButton.addEventListener("click", () => {
-        window.location.href = "../checkout/check.html";
+        window.location.href = "../checkout/checkout.html";
       });
     } else {
       checkoutContainer.innerHTML = ""; 
