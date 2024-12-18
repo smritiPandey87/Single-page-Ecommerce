@@ -1,5 +1,3 @@
-
-
 function saveUser(email, password) {
   const user = { email, password };
   const existingUsers = JSON.parse(localStorage.getItem("users")) || [];
