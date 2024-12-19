@@ -144,20 +144,4 @@ export const productInfo = [
     InStock: true,
     img: "https://rukminim2.flixcart.com/image/612/612/xif0q/skirt/t/b/j/32-3341-buynewtrend-original-imagt2zdxwjz8hrb.jpeg?q=70",
   },
-  {
-    Id: 19,
-    brand: "Forever New",
-    name: "Women Solid A-line Black Skirt",
-    price: 6300,
-    InStock: true,
-    img: "https://rukminim2.flixcart.com/image/612/612/xif0q/skirt/t/b/j/32-3341-buynewtrend-original-imagt2zdxwjz8hrb.jpeg?q=70",
-  },
-  {
-    Id: 20,
-    brand: "Forever New",
-    name: "Women Solid A-line Black Skirt",
-    price: 6300,
-    InStock: true,
-    img: "https://rukminim2.flixcart.com/image/612/612/xif0q/skirt/t/b/j/32-3341-buynewtrend-original-imagt2zdxwjz8hrb.jpeg?q=70",
-  },
 ];
