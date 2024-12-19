@@ -111,3 +111,4 @@ window.addToWishlist = function (Id) {
     showPopup("Item has been added to your wishlist!");
   }
 };
+

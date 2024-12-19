@@ -16,7 +16,7 @@ function renderWishlist() {
         <h3>${product.name}</h3>
         <p>${product.brand}</p>
         <p class="price">₹${product.price}</p>
-        <button onclick="movetoBag(${product.Id})">Move To Bag</button>
+        <button class="add-to-cart-btn" onclick="movetoBag(${product.Id})">Move To Bag</button>
         <button onclick="removeFromWishlist(${product.Id})">Remove</button>
       </div>
     `;
@@ -45,8 +45,8 @@ function movetoBag(Id) {
     alert("This item is already in your cart!");
   } else {
     cartArr.push(product);
-    localStorage.setItem("cartItems", JSON.stringify(cartArr));
-    removeFromWishlist(Id);
+    localStorage.setItem("cartItems", JSON.stringify(cartArr)); 
+    removeFromWishlist(Id); 
     alert("Item has been moved to your cart!");
   }
 }

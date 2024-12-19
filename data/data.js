@@ -27,10 +27,10 @@ export const productInfo = [
   {
     Id: 4,
     brand: "Forever New",
-    name: "Women Bodycon Black Dress",
+    name: "Women Blouse",
     price: 1200,
     InStock: true,
-    img: "https://rukminim2.flixcart.com/image/612/612/xif0q/t-shirt/c/e/h/m-reg-whs-taken-white-young-trendz-original-imah6m6h6hyvrcth.jpeg?q=70",
+    img: "https://rukminim2.flixcart.com/image/612/612/xif0q/blouse/7/o/d/free-vichitraballoon-duffaars-original-imah4ee47ztkqudw.jpeg?q=70",
   },
   {
     Id: 5,
